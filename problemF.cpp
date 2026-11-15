@@ -1,4 +1,10 @@
 //F - 统计单词数。(P1308)
+/*
+将字符串统一转换成大/小写的写法
+
+for的C++11的写法
+
+*/
 #include <iostream>
 #include <string>
 #include <cctype> // 包含 tolower 函数
@@ -10,6 +16,17 @@ string toLowerCase(string s) {
     for (char &c : s) {             
         c = tolower(c);
     }
+
+/*
+辅助函数：将字符串全部转换为大写
+string toUpperCase(string s) {
+    for (char &c : s) {
+        c = toupper(c); // 核心：把 tolower 改成 toupper
+    }
+    return s;
+}
+*/
+
     /*传统写法:
     for (int i = 0; i < s.size(); ++i) {
         s[i] = tolower(s[i]);
